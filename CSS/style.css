@@ -1,3 +1,139 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
 body li, p {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
@@ -22,13 +158,79 @@ body h3 {
         font-weight: 700;
 }
 
+.headerSection {
+    display: flex;
+    margin: 0 auto;
+    width: 1400px;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 42.6px;
+}
+
+.header img {
+    width: 61px;
+    height: 19px;
+    padding-top: 30px;
+}
+
+.headerList {
+    display: flex;
+    gap: 50px;
+}
+
+.headerList a {
+    color: black;
+    text-decoration: none;
+}
+
+.headerLink {
+    padding-top: 14px;
+}
+
+.headerLink:hover {
+    border-top: solid 2px rgb(00, 101, 252);
+    color: rgb(00, 101, 252);
+}
 
 
+@media screen and (max-width: 1024px) {
+    .headerSection {
+        width: 924px;
+    }
+}
 
+@media screen and (max-width: 768px) {
+    .headerSection {
+        display: flex;
+        flex-direction: column;
+        width: 375px;
+        gap: 30px;
+        padding: 0px;
+    }
 
+    .headerSection img {
+        padding-left: 157px;
+    }
 
+    .headerList {
+        width: 375px;
+        flex-wrap: wrap;
+        gap: 0px;
 
+    }
 
+    .headerLink {
+        width: 187.5px;
+        text-align: center;
+        padding-bottom: 15px;
+        border-bottom: solid #F2F2F2 2px;
+    }
+
+    .headerLink:hover {
+        border-top: 0px;
+        border-bottom: solid 2px rgb(00, 101, 252);
+    }
+}
 
 .centredContent {
     padding: 0 50px;
@@ -39,7 +241,7 @@ body h3 {
 
 @media screen and (max-width: 1024px) {
     .centredContent {
-        width: 668px;
+        width: 924px;
     }
 }
 
@@ -69,9 +271,6 @@ body h3 {
     }
 }
 
-
-
-
 .searchSection {
     display: flex;
     border: solid 1px #F2F2F2;
@@ -80,13 +279,11 @@ body h3 {
     height: 49px;
 }
 
-
-
 .positionIcon {
     width: 50px;
     height: 49px;
     background-color: #F2F2F2;
-    border-radius: 13px 0 0 13px ;
+    border-radius: 13px 0 0 13px;
 }
 
 .positionIcon i {
@@ -101,36 +298,20 @@ body h3 {
     border: 0px;
     text-align: center;
     font-family: 'Raleway', sans-serif;
-        font-size: 18px;
-        font-weight: 700;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .searchButton {
     height: 49px;
-    width: 132px ;
+    width: 132px;
     background-color: rgb(0, 101, 252);
     border: none;
-    border-radius: 0 15px 15px 0;  
+    border-radius: 0 15px 15px 0;
     font-family: 'Raleway', sans-serif;
-        font-size: 18px;
-        font-weight: 700;
-        color: white;
-          
-}
-
-@media screen and (max-width: 768px) {
-    .searchSection {
-        width: 335px ;
-        margin: 0 20px;
-        }
-    .searchForm {
-        width: 210px;
-        text-align: left;
-        padding-left: 24px;
-    }
-    .searchButton {
-        display: none;
-    }
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
 }
 
 
@@ -143,32 +324,43 @@ body h3 {
     background-color: rgb(0, 101, 252);
     border: solid rgb(0, 101, 252) 1px;
 }
+
 .searchIcon i {
     padding: 16px;
 }
+
 .searchIcon:hover {
     opacity: 0.6px;
 }
 
-
-
-
-
-@media screen and (max-width:768px) {
-    .searchIcon {
-        display: flex;
-    }
+.searchButton:hover {
+    opacity: 0.6;
 }
-
 
 .searchIcon:hover {
     opacity: 0.6;
 }
 
+@media screen and (max-width: 768px) {
+    .searchSection {
+        width: 335px;
+        margin: 0 20px;
+    }
 
+    .searchForm {
+        width: 210px;
+        text-align: left;
+        padding-left: 24px;
+    }
 
+    .searchButton {
+        display: none;
+    }
 
-
+    .searchIcon {
+        display: flex;
+    }
+}
 
 .filterSection {
     display: flex;
@@ -178,10 +370,32 @@ body h3 {
     margin-bottom: 37.5px;
 }
 
+.filterSection ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    border: solid #F2F2F2 2px;
+    border-radius: 20px;
+    padding: 10px 12px;
+    gap: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.filter:hover {
+    background-color: rgb(222, 235, 255);
+}
+
 @media screen and (max-width: 1024px) {
     .filterSection {
         flex-direction: column;
-        align-items:flex-start ;
+        align-items: flex-start;
     }
 }
 
@@ -191,59 +405,25 @@ body h3 {
         height: 161px;
         width: 335px;
     }
-}
 
+    .filterSection ul {
 
-
-
-.filterList {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-@media screen and (max-width:768px) {
-    .filterList {
-
-        flex-wrap:wrap;
+        flex-wrap: wrap;
         width: 335px;
         height: 120px;
         gap: 0px;
         justify-content: space-between;
     }
-}
 
-.filter {
-    display: flex;
-    justify-content: space-between;
-    border: solid #F2F2F2 2px ;
-    border-radius: 20px;
-    padding: 10px 12px ;
-    gap: 10px;
-    font-family: 'Raleway', sans-serif;
-        font-size: 14px;
-        font-weight: 700;
-}
-
-@media screen and (max-width:768px) {
     .filter {
         width: 138.5px;
         align-items: center;
         justify-content: flex-start;
         height: 50px;
-        padding : 0 0 0 19px;
-        border-radius : 25px;
+        padding: 0 0 0 19px;
+        border-radius: 25px;
     }
 }
-
-.filter:hover {
-    background-color:  rgb(222,235,255);
-}
-
-
-
-
-
 
 .informationPoint {
     display: flex;
@@ -255,12 +435,6 @@ body h3 {
         margin-bottom: 35px;
 }
 
-@media screen and (max-width:768px) {
-    .informationPoint {
-        width: 335px;
-        margin: 35px 20px ;
-    }
-}
 
 
 .circleInformation i {
@@ -273,23 +447,33 @@ body h3 {
     border-radius: 100%;
 }
 
+@media screen and (max-width:768px) {
+    .informationPoint {
+        width: 335px;
+        margin: 35px 20px ;
+    }
+}
 
-
-
-
-
-.main {
-    display: flex ;
+main {
+    display: flex;
     gap: 40px;
     width: 1340px;
 }
 
 @media screen and (max-width: 1024px) {
-    .main {
+    main {
         flex-direction: column;
         gap: 50px;
+        max-width: 924px;
     }
+}
 
+@media screen and (max-width: 768px) {
+    main {
+        width: 375px;
+        flex-direction: column-reverse;
+        gap: 35px;
+    }
 }
 
 .lodgingSection {
@@ -302,24 +486,14 @@ body h3 {
     gap: 30px;
 }
 
-@media screen and (max-width: 1024px) {
-    .lodgingSection {
-        width: 864px;
-        
-    }
-}
-
-
-
-
-.lodgingList {
+.lodgingSection ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 30px;
 }
 
-.lodgingBox{
+.lodging-Card {
     width: 242px;
     background-color: white;
     border-radius: 20px;
@@ -327,31 +501,31 @@ body h3 {
     display: flex;
     flex-direction: column;
     gap: 9px;
-    padding-bottom: 10px ;
+    padding-bottom: 10px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 }
 
-.lodgingBox img {
+.lodging-Card img {
     object-fit: cover;
-    border-radius: 20px 20px 0 0 ;
+    border-radius: 20px 20px 0 0;
     height: 114px;
     width: 232px;
     border: solid 5px white;
 }
 
-.lodgingBox p {font-family: 'Raleway', sans-serif;
+.lodging-Card p {
+    font-family: 'Raleway', sans-serif;
     font-size: 14px;
     font-weight: 400;
 
 }
 
-.lodgingBoxDescription{
+.lodging-Card-Description {
     padding-left: 15px;
     display: flex;
-        flex-direction: column;
+    flex-direction: column;
     gap: 8px;
 }
-
 
 .star {
     width: 14px;
@@ -360,13 +534,45 @@ body h3 {
 
 .stars {
     display: flex;
-    gap:3px ;
+    gap: 3px;
 }
 
+@media screen and (max-width: 1024px) {
+    .lodgingSection {
+        width: 864px;
+    }
 
+    .lodging-Card {
+        width: 268px;
+    }
 
+}
 
+@media screen and (max-width: 768px) {
+    .lodgingSection {
+        width: 335px;
+        padding: 35px 20px;
+        background-color: white;
+        height: auto;
+        gap: 15px;
+    }
 
+    .lodgingSection ul {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .lodging-Card {
+        width: 335px;
+        height: 207px;
+        gap: 4px;
+    }
+
+    .lodging-Card img {
+        width: 325px;
+    }
+}
 
 .popularSection {
     width: 369px;
@@ -378,35 +584,26 @@ body h3 {
     gap: 30px;
 }
 
-.popularSectionTitle {
+.popularSection-Title {
     display: flex;
     justify-content: space-between;
 }
 
-.popularList {
+.popularSection ul {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-@media screen and (max-width: 1024px) {
-    .popularSection {
-        width: 864px;
-    }
-    .popularList {
-        flex-direction: row;
-    }
-}
-
-.popularBox {
+.popular-Card {
     display: flex;
     height: 144px;
     background-color: white;
     border-radius: 20px;
-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1)
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1)
 }
 
-.popularBox img {
+.popular-Card img {
     width: 118px;
     height: 134px;
     object-fit: cover;
@@ -414,80 +611,142 @@ box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1)
     border-radius: 20px 0 0 20px;
 }
 
-.popularDescription {
+.popular-Card-Description {
     padding: 15px 5px 10px 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.popularDescriptionTitle {
+.popular-Card h3 {
     display: flex;
-        flex-direction: column;
+    flex-direction: column;
     gap: 5px;
 }
 
-.popularDescription h3 {
+.popular-Card-Description h3 {
     font-family: 'Raleway', sans-serif;
-        font-size: 16px;
-        font-weight: 700;
+    font-size: 16px;
+    font-weight: 700;
 }
 
+@media screen and (max-width: 1024px) {
+    .popularSection {
+        width: 864px;
+    }
 
+    .popularSection ul {
+        flex-direction: row;
+    }
 
+    .popular-Card {
+        width: 274px;
+    }
 
+    .popular-Card img {
+        width: 81.5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .popularSection {
+        gap: 15px;
+        border-radius: 0px;
+        width: 335px;
+        height: 509px;
+        padding: 30px 20px;
+    }
+
+    .popularSection ul {
+        flex-direction: column;
+    }
+
+    .popular-Card {
+        width: 335px;
+    }
+
+    .popular-Card img {
+        width: 101px;
+        height: 134px;
+    }
+}
 
 .activities {
     padding: 30px;
     display: flex;
     flex-direction: column;
-    gap: 30px ;
+    gap: 30px;
     margin-top: 35px;
 }
 
-.activitiesList {
+.activities ul {
     display: flex;
     gap: 30px;
 }
 
-.activitiesBox {
+.activities-Card {
     height: 439px;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 }
 
-.activitiesBox h3 {
+.activities-Card h3 {
     padding: 20px 19px;
 }
 
-
-
-.activitiesBox img {
+.activities-Card img {
     height: 380px;
-    width: 297px ;
+    width: 297px;
     object-fit: cover;
-    border-radius: 20px 20px 0 0 ;
+    border-radius: 20px 20px 0 0;
 }
 
 @media screen and (max-width: 1024px) {
-    .activitiesBox {
-        height : 270px ;
+    .activities-Card {
+        height: 270px;
         width: 193px;
         display: grid;
     }
-    .activitiesBox img {
-            width: 193px;
-            height: 200px;
-        }
+
+    .activities-Card img {
+        width: 193px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .activities {
+        width: 335px;
+        padding: 35px 20px 30px 20px;
     }
 
+    .activities ul {
+        flex-direction: column;
+    }
 
+    .activities-Card {
+        width: 335px;
+        height: 200px;
+        display: grid;
+    }
 
-
+    .activities-Card img {
+        width: 335px;
+        height: 141px;
+    }
+}
 
 .footer {
     background-color: #F2F2F2;
+}
+
+.footerNav ul {
+    width: 406px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .footerNav {
@@ -495,16 +754,22 @@ box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1)
     justify-content: flex-start;
 }
 
-.footerList{
-    width: 406px ;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px ;
+@media screen and (max-width: 1024px) {
+    .footerNav ul {
+        width: 294px;
+    }
 }
 
-@media screen and (max-width: 1024px) {
-    .footerList {
-        width: 294px;
+@media screen and (max-width: 768px) {
+    .footer {
+        width: 375px;
+    }
+
+    .footerNav {
+        flex-direction: column;
+    }
+
+    .footerNav ul {
+        padding: 30px;
     }
 }
