@@ -338,7 +338,7 @@ body h3 {
     background-color: rgb(0, 101, 252);
     border: none;
     border-radius: 0 15px 15px 0;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
     color: white;
     padding: 0;
@@ -423,7 +423,7 @@ body h3 {
 }
 
 .filter p {
-        font-size: 17px;
+        font-size: 1.05rem;
         font-weight: 700;
 }
 
@@ -491,6 +491,9 @@ margin-bottom: 35px;
         width: 100%;
         max-width: 335px;
         }
+        .circle-information {
+            padding-left: 20px;
+        }
 }
 
 
@@ -521,7 +524,7 @@ margin-bottom: 35px;
 .lodging-section {
     display: flex;
     flex-direction: column;
-    max-width: 811px;
+    max-width: 870px;
     width: 65%;
     background-color: #F2F2F2;
     border-radius: 15px;
@@ -635,7 +638,7 @@ margin-bottom: 35px;
 }
 
 .popular-section {
-    width: 30%;
+    width: 32%;
     max-width: 429px;
     background-color: #F2F2F2;
     border-radius: 15px;
@@ -735,7 +738,8 @@ margin-bottom: 35px;
     .popular-section-title {
         max-width: 295px ;
         width: 100%;
-        padding: 30px 20px 0 20px ;
+        padding: 0;
+        padding-top: 30px;
     }
 
     .popular-section ul {
@@ -767,7 +771,7 @@ margin-bottom: 35px;
     margin-bottom: 65px;
 }
 
-.activities h2 {
+.activities h1 {
     margin: 30px 0 30px 30px;
 }
 
@@ -826,12 +830,11 @@ margin-bottom: 35px;
         width: 90%;
         max-width: 728px;
         align-items: center; 
-        margin: 0;   
     }
-    .activities h2 {
+    .activities h1 {
         font-size: 1.4rem;
         margin: 0;
-        margin-top: 85px;
+        margin-top: 50px;
         margin-right: 70px;
     }
 
@@ -861,7 +864,7 @@ margin-bottom: 35px;
     background-color: #F2F2F2;
 }
 
-.footerNav ul {
+.footer-nav ul {
     max-width: 406px;
     width: 100%;
     padding: 20px;
@@ -870,24 +873,24 @@ margin-bottom: 35px;
     gap: 15px;
 }
 
-.footerNav {
+.footer-nav {
     display: flex;
     justify-content: flex-start;
 }
 
 @media screen and (max-width: 1024px) {
     .footer {max-width: 924;}
-    .footerNav ul {
+    .footer-nav ul {
         width: 30%;
         max-width: 294px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .footerNav {
+    .footer-nav {
         flex-direction: column;
     }
-    .footerNav ul {
+    .footer-nav ul {
         padding: 30px 0 30px 20px;
         width: 100%;
         max-width: 150px;
